@@ -11,7 +11,7 @@ router.get('/contacts', (req, res, next) => {
 });
 
 // add contact
-router.post('/contacts', (req, res, next) => {
+router.post('/contact', (req, res, next) => {
     let newContact = new Contact({
         first_name: req.body.first_name,
         last_name: req.body.last_name,
@@ -33,7 +33,7 @@ router.post('/contacts', (req, res, next) => {
 });
 
 //delete contacts
-router.delete('/contacts/:id', (req, res, next) => {
+router.delete('/contact/:id', (req, res, next) => {
     Contact.remove({
         _id: req.params.id
     }, function(err, result) {
